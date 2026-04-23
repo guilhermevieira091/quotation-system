@@ -147,9 +147,11 @@ function DashboardLayoutContent({
               </button>
               {!isCollapsed ? (
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-semibold tracking-tight truncate" style={{ fontFamily: "Poppins, sans-serif" }}>
-                    Piemont
-                  </span>
+                  <img
+                    src="/KEEP.jpg"
+                    alt="Keep Conservadora"
+                    className="h-8 w-auto rounded"
+                  />
                 </div>
               ) : null}
             </div>
