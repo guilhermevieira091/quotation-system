@@ -188,7 +188,7 @@ function SettingsContent() {
         </div>
         <Button
           onClick={openCreate}
-          className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white shadow-sm"
+          className="bg-[#1a7cc1] hover:bg-[#1a7cc1]/90 text-white shadow-sm"
         >
           <Plus className="h-4 w-4 mr-2" />
           Novo cargo
@@ -203,7 +203,7 @@ function SettingsContent() {
               className="text-base font-semibold flex items-center gap-2"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              <Settings2 className="h-4 w-4 text-[#1e3a8a]" />
+              <Settings2 className="h-4 w-4 text-[#1a7cc1]" />
               Configurações de cargo
             </CardTitle>
             {(jobConfigs?.length ?? 0) > 0 && (
@@ -230,8 +230,8 @@ function SettingsContent() {
                   className="flex items-start sm:items-center justify-between gap-4 p-5 hover:bg-muted/30 transition-colors"
                 >
                   <div className="flex items-start gap-4 min-w-0">
-                    <div className="rounded-lg bg-[#1e3a8a]/8 p-2.5 shrink-0 mt-0.5 sm:mt-0">
-                      <Briefcase className="h-4 w-4 text-[#1e3a8a]" />
+                    <div className="rounded-lg bg-[#1a7cc1]/8 p-2.5 shrink-0 mt-0.5 sm:mt-0">
+                      <Briefcase className="h-4 w-4 text-[#1a7cc1]" />
                     </div>
                     <div className="min-w-0">
                       <p className="font-semibold text-sm truncate">
@@ -485,7 +485,7 @@ function SettingsContent() {
             <Button
               onClick={handleSave}
               disabled={isPending}
-              className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white"
+              className="bg-[#1a7cc1] hover:bg-[#1a7cc1]/90 text-white"
             >
               {isPending ? "Salvando..." : editingConfig ? "Salvar alterações" : "Criar cargo"}
             </Button>
@@ -556,7 +556,7 @@ function EmptyConfigs({ onNew }: { onNew: () => void }) {
       <Button
         onClick={onNew}
         size="sm"
-        className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white"
+        className="bg-[#1a7cc1] hover:bg-[#1a7cc1]/90 text-white"
       >
         <Plus className="h-4 w-4 mr-2" />
         Criar primeiro cargo

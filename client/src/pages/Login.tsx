@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lock, Eye, EyeOff } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function Login() {
-  const [, setLocation] = useLocation();
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -38,34 +36,29 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center p-4">
+    <div
+      className="min-h-screen flex items-center justify-center p-4"
+      style={{ backgroundColor: "#1a7cc1" }}
+    >
       <div className="w-full max-w-sm space-y-6">
-        {/* Logo / título */}
-        <div className="text-center space-y-2">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1e3a8a] mb-2">
-            <Lock className="h-6 w-6 text-white" />
-          </div>
-          <h1
-            className="text-2xl font-bold text-[#1e3a8a]"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Piemont
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            Composição de Custo
+        <div className="flex flex-col items-center gap-3">
+          <img
+            src="/KEEP.jpg"
+            alt="Keep Conservadora"
+            className="w-48 rounded-xl shadow-lg"
+          />
+          <p className="text-white/80 text-sm font-medium tracking-wide">
+            Propostas Keep
           </p>
         </div>
 
-        <Card className="border border-border shadow-sm">
-          <CardHeader className="pb-4">
-            <CardTitle
-              className="text-base font-semibold text-center"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
-              Acesso restrito
-            </CardTitle>
+        <Card className="border-0 shadow-xl">
+          <CardHeader className="pb-2 pt-6 text-center">
+            <p className="text-sm text-muted-foreground">
+              Acesso restrito — equipe interna
+            </p>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 px-6 pb-6">
             <div className="space-y-2">
               <Label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
                 Senha
@@ -100,7 +93,8 @@ export default function Login() {
             <Button
               onClick={handleLogin}
               disabled={loading || !password}
-              className="w-full bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white"
+              className="w-full text-white font-semibold"
+              style={{ backgroundColor: "#1a7cc1" }}
             >
               {loading ? "Entrando..." : "Entrar"}
             </Button>

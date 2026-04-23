@@ -117,7 +117,7 @@ function CreateBudgetContent() {
                 className="text-sm font-semibold flex items-center gap-2"
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
-                <Building2 className="h-4 w-4 text-[#1e3a8a]" />
+                <Building2 className="h-4 w-4 text-[#1a7cc1]" />
                 Dados do cliente
               </CardTitle>
             </CardHeader>
@@ -164,7 +164,7 @@ function CreateBudgetContent() {
                 className="text-sm font-semibold flex items-center gap-2"
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
-                <Briefcase className="h-4 w-4 text-[#1e3a8a]" />
+                <Briefcase className="h-4 w-4 text-[#1a7cc1]" />
                 Configuração de cargo
               </CardTitle>
             </CardHeader>
@@ -247,7 +247,7 @@ function CreateBudgetContent() {
                 className="text-sm font-semibold flex items-center gap-2"
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
-                <Calculator className="h-4 w-4 text-[#1e3a8a]" />
+                <Calculator className="h-4 w-4 text-[#1a7cc1]" />
                 Resumo
               </CardTitle>
             </CardHeader>
@@ -289,7 +289,7 @@ function CreateBudgetContent() {
           </Card>
 
           <Button
-            className="w-full bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white shadow-sm"
+            className="w-full bg-[#1a7cc1] hover:bg-[#1a7cc1]/90 text-white shadow-sm"
             onClick={handleSubmit}
             disabled={
               createMutation.isPending ||
@@ -325,7 +325,7 @@ function SummaryRow({
     <div className="flex justify-between items-center gap-4">
       <span className="text-xs text-muted-foreground">{label}</span>
       <span
-        className={`text-xs font-medium text-right ${mono ? "font-mono text-[#1e3a8a]" : ""}`}
+        className={`text-xs font-medium text-right ${mono ? "font-mono text-[#1a7cc1]" : ""}`}
       >
         {value}
       </span>

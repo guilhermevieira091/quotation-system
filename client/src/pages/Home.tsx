@@ -97,7 +97,7 @@ function HomeContent() {
         </div>
         <Button
           onClick={() => setLocation("/create-budget")}
-          className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white shadow-sm"
+          className="bg-[#1a7cc1] hover:bg-[#1a7cc1]/90 text-white shadow-sm"
         >
           <Plus className="h-4 w-4 mr-2" />
           Novo orçamento
@@ -107,17 +107,17 @@ function HomeContent() {
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <StatCard
-          icon={<FileText className="h-5 w-5 text-[#1e3a8a]" />}
+          icon={<FileText className="h-5 w-5 text-[#1a7cc1]" />}
           label="Total de orçamentos"
           value={isLoading ? null : String(budgets?.length ?? 0)}
         />
         <StatCard
-          icon={<TrendingUp className="h-5 w-5 text-[#1e3a8a]" />}
+          icon={<TrendingUp className="h-5 w-5 text-[#1a7cc1]" />}
           label="Valor total gerado"
           value={isLoading ? null : formatCurrency(totalValue)}
         />
         <StatCard
-          icon={<Users className="h-5 w-5 text-[#1e3a8a]" />}
+          icon={<Users className="h-5 w-5 text-[#1a7cc1]" />}
           label="Configurações de cargo"
           value={isLoading ? null : String(jobConfigs?.length ?? 0)}
         />
@@ -189,7 +189,7 @@ function HomeContent() {
                       {budget.quantity}
                     </TableCell>
                     <TableCell>
-                      <span className="text-sm font-semibold text-[#1e3a8a] font-mono">
+                      <span className="text-sm font-semibold text-[#1a7cc1] font-mono">
                         {formatCurrency(Number(budget.totalAmount))}
                       </span>
                     </TableCell>
@@ -293,7 +293,7 @@ function StatCard({
               </p>
             )}
           </div>
-          <div className="rounded-lg bg-[#1e3a8a]/8 p-2.5">{icon}</div>
+          <div className="rounded-lg bg-[#1a7cc1]/8 p-2.5">{icon}</div>
         </div>
       </CardContent>
     </Card>
@@ -316,7 +316,7 @@ function EmptyBudgets({ onNew }: { onNew: () => void }) {
       <Button
         onClick={onNew}
         size="sm"
-        className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90 text-white"
+        className="bg-[#1a7cc1] hover:bg-[#1a7cc1]/90 text-white"
       >
         <Plus className="h-4 w-4 mr-2" />
         Criar orçamento
